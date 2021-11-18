@@ -1,5 +1,12 @@
-import React from 'react';
+import Body from 'components/Body';
+import Header from 'components/Header';
 
+import { Wrap } from './App.styles';
 export function App(): JSX.Element {
-  return <div data-testid="greetings-container">Welcome to the Origin THA</div>;
+  return (
+    <Wrap>
+      <Header />
+      <Body />
+    </Wrap>
+  );
 }
