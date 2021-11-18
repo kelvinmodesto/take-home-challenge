@@ -109,6 +109,16 @@ export const CardHeaderSubtitle = styled.span`
   }
 `;
 
+export const CardSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+`;
+export const CardSectionText = styled.span``;
+export const CardSectionValue = styled.div``;
+
 export const CardFooter = styled.div`
   display: flex;
   flex-direction: column;
@@ -116,7 +126,42 @@ export const CardFooter = styled.div`
   margin-bottom: 32px;
 `;
 
-export const CardFooterCost = styled.div``;
+export const CardFooterCost = styled.div`
+  background-color: ${(props) => props.theme.colors.neutral.white};
+  padding: 31px 0px 23px 32px;
+  display: flex;
+  justify-content: space-between;
+  @media (min-width: 600px) {
+  }
+`;
+export const CardFooterCostText = styled.div`
+  color: ${(props) => props.theme.colors.typography.blueGray900};
+
+  font-weight: 500;
+  font-family: 'Work Sans';
+  font-size: 18px;
+  line-break: 22px;
+
+  @media (min-width: 600px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+`;
+export const CardFooterCostValues = styled.div`
+  color: ${(props) => props.theme.colors.typography.brandColorSecondary};
+  margin-right: 30px;
+
+  font-weight: 500;
+  font-family: 'Rubik';
+  font-size: 24px;
+  line-break: 29px;
+
+  @media (min-width: 600px) {
+    margin-right: 24px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+`;
 export const CardFooterText = styled.div`
   font-size: 12px;
   line-height: 16px;
@@ -127,8 +172,5 @@ export const CardFooterText = styled.div`
   padding: 24px 32px;
 
   background-color: ${(props) => props.theme.colors.neutral.blueGray10};
-  color: ${(props) => props.theme.colors.neutral.blueGray900};
-
-  @media (min-width: 600px) {
-  }
+  color: ${(props) => props.theme.colors.typography.blueGray900};
 `;
